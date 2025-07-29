@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../ui/Intro/intro_page.dart';
 import '../ui/splash/splash_page.dart';
 
 class AppRoutes {
@@ -14,7 +15,7 @@ class AppRoutes {
 static Map<String, Widget Function(BuildContext)> getRoutes() {
     return {
       splash: (context) => const SplashPage(),
-      // intro: (context) => const IntroPage(),
+      intro: (context) => const IntroPage(),
     };
   } 
   // Add more routes as needed

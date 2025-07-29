@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/ui/splash/splash_page.dart';
+import 'package:spotify_clone/domain/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        
+        fontFamily: 'avenir',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashPage(),
+      routes: AppRoutes.getRoutes(),
+      initialRoute: AppRoutes.splash,
     );
   }
 }
