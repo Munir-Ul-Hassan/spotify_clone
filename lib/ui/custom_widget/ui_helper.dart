@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/domain/app_colors.dart';
 
-Widget mSpacer({double mheight = 11, double mwidth = 11}) =>
+Widget mSpacer({double mheight = 11, double mwidth = 11,}) =>
     SizedBox(height: mheight, width: mwidth);
 
 
@@ -19,4 +19,26 @@ InputDecoration getInputDecorationStyle() {
     ),
     
   );
+}
+  InputDecoration getSearchDecorationStyle({IconData mTcons = Icons.search,Color bgColor=AppColors.whiteColor,String mText = 'Search...'}) {
+  return InputDecoration(
+    filled: true,
+    fillColor: bgColor,
+    hint: Text(mText),
+    hintStyle: TextStyle(color: AppColors.SecondryblackColor),
+    prefixIcon: Icon(
+      mTcons,
+      color: AppColors.SecondryblackColor,
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+    ),
+     focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+    ),
+    
+    
+    
+  );
+
 }
